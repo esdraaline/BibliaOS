@@ -20,8 +20,9 @@ Repositório Git válido, branch `main`, com a estrutura de pastas do PRD §5.2 
 - Repositório Git inicializado, branch `main`, primeiro commit feito
 - As 12 pastas do PRD §5.2 (10 numeradas + `_templates/` + `_inbox/`), cada uma com `.gitkeep`
 
+- Remoto no GitHub conectado: `origin` → https://github.com/esdraaline/BibliaOS (privado)
+
 **O que não existe ainda:**
-- Remoto no GitHub (fica com o Josemar)
 - Qualquer template, script ou ficha de livro
 - Qualquer nota
 
@@ -42,7 +43,7 @@ Repositório Git válido, branch `main`, com a estrutura de pastas do PRD §5.2 
 
 ## Pendências do Josemar (não do agente)
 
-- [ ] Criar repositório **privado** no GitHub e conectar como remoto
+- [x] Criar repositório **privado** no GitHub e conectar como remoto
 - [ ] Instalar o Obsidian e abrir esta pasta como vault
 - [ ] Ativar os plugins core Bases e Templates
 - [ ] Escolher o app de captura no celular (PRD §5.4) — não precisa ser Obsidian
