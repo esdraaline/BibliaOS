@@ -44,9 +44,9 @@ Repositório Git válido, branch `main`, com a estrutura de pastas do PRD §5.2 
 ## Pendências do Josemar (não do agente)
 
 - [x] Criar repositório **privado** no GitHub e conectar como remoto
-- [ ] Instalar o Obsidian e abrir esta pasta como vault
-- [ ] Ativar os plugins core Bases e Templates
-- [ ] Escolher o app de captura no celular (PRD §5.4) — não precisa ser Obsidian
+- [x] Instalar o Obsidian e abrir esta pasta como vault — Obsidian 1.12.7, vault aberto em `C:\projetos\bibliaos`
+- [x] Ativar os plugins core Bases e Templates — ambos ativos, pasta de modelos `_templates`; nenhum plugin de comunidade habilitado (`.obsidian/plugins` não existe)
+- [x] Escolher o app de captura no celular (PRD §5.4) — Google Keep, nota "Inbox BibliaOS" criada, sem sync com o vault
 - [ ] Preencher o conteúdo de `00-Metodo/` depois do S3
 
 ---
