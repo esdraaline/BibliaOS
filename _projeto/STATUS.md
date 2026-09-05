@@ -3,28 +3,31 @@
 > Este arquivo é a memória do projeto entre sessões. O agente o atualiza ao fim de cada sprint.
 > Se você voltar daqui a três semanas, leia só isto e saberá onde parou.
 
-**Última atualização:** 2026-08-04
-**Sprint atual:** S1 — Esqueleto do vault
-**Próximo prompt a colar:** `_projeto/prompts/S1-esqueleto.md`
+**Última atualização:** 2026-09-04
+**Sprint atual:** S2 — Painel, setup e testes
+**Próximo prompt a colar:** `_projeto/prompts/S2-painel.md`
 
 ---
 
 ## Estado atual
 
-Repositório Git válido, branch `main`, com a estrutura de pastas do PRD §5.2 criada. Nenhuma nota de conteúdo ainda existe.
+Repositório Git válido, branch `main`, com a estrutura de pastas do PRD §5.2 criada, 66 fichas de livros geradas em `02-Livros/`, templates básicos em `_templates/` e script de geração idempotente na raiz.
 
 **O que existe:**
 - `CLAUDE.md`
 - `_projeto/` com PRD v11, README, SPRINTS, DECISOES, STATUS e os prompts
 - `.gitignore` e `.gitattributes` (conferidos contra PRD §5.4, sem alteração)
-- Repositório Git inicializado, branch `main`, primeiro commit feito
-- As 12 pastas do PRD §5.2 (10 numeradas + `_templates/` + `_inbox/`), cada uma com `.gitkeep`
-
+- Repositório Git inicializado, branch `main`, commits de S0 e S1
+- As 12 pastas do PRD §5.2 (10 numeradas + `_templates/` + `_inbox/`)
+- `gerar_fichas.py` na raiz
+- 66 fichas de livros em `02-Livros/` (frontmatter YAML completo e cabeçalhos de estudo vazios)
+- `_templates/nota.md` e `_templates/prompts.md`
 - Remoto no GitHub conectado: `origin` → https://github.com/esdraaline/BibliaOS (privado)
 
 **O que não existe ainda:**
-- Qualquer template, script ou ficha de livro
-- Qualquer nota
+- `_painel.base` e notas-mestras de `00-Metodo/`
+- Templates especializados de dossiê (`dossie-palavra.md`, `dossie-tema.md`, `porta.md`) e conteúdo dos prompts
+- Qualquer nota de estudo com conteúdo preenchido
 
 ---
 
@@ -33,7 +36,7 @@ Repositório Git válido, branch `main`, com a estrutura de pastas do PRD §5.2 
 | Sprint | Estado | Data | Observação |
 |---|---|---|---|
 | S0 — Fundação do repositório | ✅ concluído | 2026-08-04 | Ver evidência no commit `sprint(S0)` |
-| S1 — Esqueleto do vault | ⬜ pendente | — | — |
+| S1 — Esqueleto do vault | ✅ concluído | 2026-09-04 | 66 fichas em 02-Livros/, gerar_fichas.py, nota.md e prompts.md |
 | S2 — Painel, setup e testes | ⬜ pendente | — | — |
 | S3 — Esqueletos de método | ⬜ pendente | — | — |
 | S4 — Módulo dossiê | ⬜ pendente | — | — |
