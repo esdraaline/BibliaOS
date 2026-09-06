@@ -50,10 +50,10 @@ Repositório Git válido, branch `main`, com a estrutura de pastas do PRD §5.2 
 ## Pendências do Josemar (não do agente)
 
 - [x] Criar repositório **privado** no GitHub e conectar como remoto
-- [x] Instalar o Obsidian e abrir esta pasta como vault — Obsidian 1.12.7, vault aberto em `C:\projetos\bibliaos`
+- [x] Instalar o Obsidian e abrir esta pasta como vault — Obsidian 1.13.7, vault aberto em `C:\projetos\bibliaos`
 - [x] Ativar os plugins core Bases e Templates — ambos ativos, pasta de modelos `_templates`; nenhum plugin de comunidade habilitado (`.obsidian/plugins` não existe)
 - [x] Escolher o app de captura no celular (PRD §5.4) — Google Keep, nota "Inbox BibliaOS" criada, sem sync com o vault
-- [ ] Abrir `_painel.base` no Obsidian e confirmar renderização visual das 6 views
+- [x] Abrir `_painel.base` no Obsidian e confirmar renderização visual — feito em 2026-09-06 no Obsidian 1.13.7, com captura de tela: a view Pipeline renderiza sem erro, com as 4 colunas (`file.name`, `tipo`, `status`, `ultima_revisao`) e 0 resultado, que é o esperado enquanto todas as 66 fichas estão em `status: vazio`
 - [ ] Preencher o conteúdo de `00-Metodo/` depois do S3
 
 ---
@@ -66,4 +66,4 @@ Nenhum.
 
 ## Últimas decisões registradas
 
-Ver `_projeto/DECISOES.md`. As decisões D-01 a D-16 já estão fechadas e vêm do PRD — não devem ser reabertas pelo agente. D-17 (S0): correção de inconsistências textuais herdadas do PRD v10 → v11. D-18 (S2): `verificar.py` exclui `_templates/` e `00-Metodo/setup.md` da varredura de notas; checks 4 e 5 voltaram a exigir `tipo`/`status` sempre válidos, sem exceção.
+Ver `_projeto/DECISOES.md`. As decisões D-01 a D-16 já estão fechadas e vêm do PRD — não devem ser reabertas pelo agente. D-17 (S0): correção de inconsistências textuais herdadas do PRD v10 → v11. D-18 (S2): `verificar.py` exclui `_templates/` e `00-Metodo/setup.md` da varredura de notas; checks 4 e 5 voltaram a exigir `tipo`/`status` sempre válidos, sem exceção. D-19 (S2): sintaxe do `.base` reconciliada contra o Obsidian 1.13.7 real (`order:` em vez de `columns:`, `direction` maiúsculo, filtro global com `file.ext` e `file.hasProperty`).

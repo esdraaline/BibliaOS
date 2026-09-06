@@ -1,5 +1,7 @@
 filters:
   and:
+    - file.ext == "md"
+    - file.hasProperty("status")
     - "!file.path.startsWith('_templates/')"
     - "!file.path.startsWith('_inbox/')"
     - "!file.path.startsWith('_projeto/')"
@@ -11,14 +13,15 @@ views:
         - status != "vazio"
     groupBy:
       property: status
-      direction: asc
+      direction: ASC
     order:
-      - file.name
-    columns:
       - file.name
       - tipo
       - status
       - ultima_revisao
+    sort:
+      - property: ultima_revisao
+        direction: ASC
   - type: table
     name: Sem fonte
     filters:
@@ -26,7 +29,7 @@ views:
         - status == "consolidado"
         - fontes.isEmpty()
         - lacunas.isEmpty()
-    columns:
+    order:
       - file.name
       - tipo
       - status
@@ -37,8 +40,8 @@ views:
     filters:
       and:
         - status == "consolidado"
-        - file.outlinks.isEmpty()
-    columns:
+        - file.links.isEmpty()
+    order:
       - file.name
       - tipo
       - status
@@ -47,20 +50,20 @@ views:
     filters:
       and:
         - status == "consolidado"
-    sort:
-      - property: ultima_revisao
-        direction: asc
-    limit: 5
-    columns:
+    order:
       - file.name
       - tipo
       - ultima_revisao
+    sort:
+      - property: ultima_revisao
+        direction: ASC
+    limit: 5
   - type: table
     name: Pauta de leitura
     filters:
       and:
         - "!lacunas.isEmpty()"
-    columns:
+    order:
       - file.name
       - tipo
       - lacunas
@@ -69,7 +72,7 @@ views:
     filters:
       and:
         - tipo == "palavra"
-    columns:
+    order:
       - file.name
       - termos_originais
       - status
