@@ -1,0 +1,76 @@
+filters:
+  and:
+    - "!file.path.startsWith('_templates/')"
+    - "!file.path.startsWith('_inbox/')"
+    - "!file.path.startsWith('_projeto/')"
+views:
+  - type: table
+    name: Pipeline
+    filters:
+      and:
+        - status != "vazio"
+    groupBy:
+      property: status
+      direction: asc
+    order:
+      - file.name
+    columns:
+      - file.name
+      - tipo
+      - status
+      - ultima_revisao
+  - type: table
+    name: Sem fonte
+    filters:
+      and:
+        - status == "consolidado"
+        - fontes.isEmpty()
+        - lacunas.isEmpty()
+    columns:
+      - file.name
+      - tipo
+      - status
+      - fontes
+      - lacunas
+  - type: table
+    name: Órgãos isolados
+    filters:
+      and:
+        - status == "consolidado"
+        - file.outlinks.isEmpty()
+    columns:
+      - file.name
+      - tipo
+      - status
+  - type: table
+    name: Regeneração
+    filters:
+      and:
+        - status == "consolidado"
+    sort:
+      - property: ultima_revisao
+        direction: asc
+    limit: 5
+    columns:
+      - file.name
+      - tipo
+      - ultima_revisao
+  - type: table
+    name: Pauta de leitura
+    filters:
+      and:
+        - "!lacunas.isEmpty()"
+    columns:
+      - file.name
+      - tipo
+      - lacunas
+  - type: table
+    name: Léxico pessoal
+    filters:
+      and:
+        - tipo == "palavra"
+    columns:
+      - file.name
+      - termos_originais
+      - status
+      - ultima_revisao
