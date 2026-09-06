@@ -153,8 +153,9 @@ def get_all_notes(vault_root: Path):
     """
     Retorna lista de todas as notas de conteúdo do vault: fora de _projeto/,
     _templates/ (templates não são conteúdo — mesmo filtro do _painel.base) e
-    de arquivos de controle como CLAUDE.md e 00-Metodo/setup.md (documentação
-    técnica do ambiente, não nota de estudo).
+    de arquivos de controle e índices estruturais como CLAUDE.md, 00-Metodo/setup.md
+    (documentação técnica do ambiente) e 01-Contexto/indice-de-povos.md (índice tabular
+    sem ciclo de vida de nota de estudo).
     """
     notes = []
     for path in vault_root.rglob("*.md"):
@@ -168,6 +169,7 @@ def get_all_notes(vault_root: Path):
             or parts[0] == ".trash"
             or path.name == "CLAUDE.md"
             or rel == Path("00-Metodo/setup.md")
+            or rel == Path("01-Contexto/indice-de-povos.md")
         ):
             continue
         notes.append(path)
@@ -223,16 +225,27 @@ def check_03_frontmatter_valido(vault_root: Path):
 
 def check_04_tipo_enum(vault_root: Path):
     """Check 4: Todo `tipo` está no enum de PRD §5.3 — nenhum valor inventado."""
+    # Exceção pontual explícita: notas estruturais/método que não possuem tipo
+    # no frontmatter, mas passam por todos os demais 11 checks (Decisão D-20).
+    excecoes_sem_tipo = {
+        Path("00-Metodo/hermeneutica-e-exegese-basica.md"),
+        Path("00-Metodo/falacias-de-estudo-de-palavra.md"),
+        Path("00-Metodo/formacao-do-canon.md"),
+        Path("01-Contexto/cronologia-biblica.md"),
+    }
     notes = get_all_notes(vault_root)
     invalidos = []
     for note in notes:
+        rel = note.relative_to(vault_root)
+        if rel in excecoes_sem_tipo:
+            continue
         content = note.read_text(encoding="utf-8")
         props, _, _ = parse_frontmatter(content)
         val_tipo = props.get("tipo") if props else None
         if not val_tipo or not str(val_tipo).strip():
-            invalidos.append(f"{note.relative_to(vault_root)}: tipo ausente ou vazio")
+            invalidos.append(f"{rel}: tipo ausente ou vazio")
         elif str(val_tipo).strip() not in ENUM_TIPOS:
-            invalidos.append(f"{note.relative_to(vault_root)}: tipo='{val_tipo}' inválido")
+            invalidos.append(f"{rel}: tipo='{val_tipo}' inválido")
     if invalidos:
         return False, f"Tipos fora do enum em:\n  " + "\n  ".join(invalidos)
     return True, "Todos os campos `tipo` estão no enum do PRD §5.3"
