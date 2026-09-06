@@ -66,4 +66,4 @@ Nenhum.
 
 ## Últimas decisões registradas
 
-Ver `_projeto/DECISOES.md`. As decisões D-01 a D-16 já estão fechadas e vêm do PRD — não devem ser reabertas pelo agente. D-17 (S0): correção de inconsistências textuais herdadas do PRD v10 → v11. No Sprint S2, nenhuma decisão fora do PRD foi necessária.
+Ver `_projeto/DECISOES.md`. As decisões D-01 a D-16 já estão fechadas e vêm do PRD — não devem ser reabertas pelo agente. D-17 (S0): correção de inconsistências textuais herdadas do PRD v10 → v11. D-18 (S2): `verificar.py` exclui `_templates/` e `00-Metodo/setup.md` da varredura de notas; checks 4 e 5 voltaram a exigir `tipo`/`status` sempre válidos, sem exceção.

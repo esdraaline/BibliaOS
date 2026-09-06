@@ -1,15 +1,3 @@
----
-tipo: 
-nome: Setup do ambiente
-aliases: [setup, configuracao]
-status: vazio
-fontes: []
-lacunas: []
-termos_originais: []
-tags: []
-ultima_revisao: null
----
-
 # Setup do Ambiente — BíbliaOS
 
 > Documentação técnica do ambiente de trabalho do vault BíbliaOS.

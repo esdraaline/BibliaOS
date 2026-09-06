@@ -151,20 +151,23 @@ def parse_frontmatter(content: str):
 
 def get_all_notes(vault_root: Path):
     """
-    Retorna lista de todas as notas do vault fora de _projeto/ e .git/,
-    excluindo arquivos de controle e prompts (como CLAUDE.md e _templates/prompts.md).
+    Retorna lista de todas as notas de conteúdo do vault: fora de _projeto/,
+    _templates/ (templates não são conteúdo — mesmo filtro do _painel.base) e
+    de arquivos de controle como CLAUDE.md e 00-Metodo/setup.md (documentação
+    técnica do ambiente, não nota de estudo).
     """
     notes = []
     for path in vault_root.rglob("*.md"):
-        # Ignora arquivos em _projeto, .git, .obsidian, .trash
+        # Ignora arquivos em _projeto, _templates, .git, .obsidian, .trash
         rel = path.relative_to(vault_root)
         parts = rel.parts
         if (
             parts[0] == "_projeto"
+            or parts[0] == "_templates"
             or parts[0].startswith(".")
             or parts[0] == ".trash"
             or path.name == "CLAUDE.md"
-            or (parts[0] == "_templates" and path.name == "prompts.md")
+            or rel == Path("00-Metodo/setup.md")
         ):
             continue
         notes.append(path)
@@ -225,11 +228,11 @@ def check_04_tipo_enum(vault_root: Path):
     for note in notes:
         content = note.read_text(encoding="utf-8")
         props, _, _ = parse_frontmatter(content)
-        if props and "tipo" in props:
-            val_tipo = props["tipo"]
-            if val_tipo is not None and str(val_tipo).strip():
-                if str(val_tipo).strip() not in ENUM_TIPOS:
-                    invalidos.append(f"{note.relative_to(vault_root)}: tipo='{val_tipo}' inválido")
+        val_tipo = props.get("tipo") if props else None
+        if not val_tipo or not str(val_tipo).strip():
+            invalidos.append(f"{note.relative_to(vault_root)}: tipo ausente ou vazio")
+        elif str(val_tipo).strip() not in ENUM_TIPOS:
+            invalidos.append(f"{note.relative_to(vault_root)}: tipo='{val_tipo}' inválido")
     if invalidos:
         return False, f"Tipos fora do enum em:\n  " + "\n  ".join(invalidos)
     return True, "Todos os campos `tipo` estão no enum do PRD §5.3"
@@ -242,11 +245,11 @@ def check_05_status_enum(vault_root: Path):
     for note in notes:
         content = note.read_text(encoding="utf-8")
         props, _, _ = parse_frontmatter(content)
-        if props and "status" in props:
-            val_status = props["status"]
-            if val_status is not None and str(val_status).strip():
-                if str(val_status).strip() not in ENUM_STATUS:
-                    invalidos.append(f"{note.relative_to(vault_root)}: status='{val_status}' inválido")
+        val_status = props.get("status") if props else None
+        if not val_status or not str(val_status).strip():
+            invalidos.append(f"{note.relative_to(vault_root)}: status ausente ou vazio")
+        elif str(val_status).strip() not in ENUM_STATUS:
+            invalidos.append(f"{note.relative_to(vault_root)}: status='{val_status}' inválido")
     if invalidos:
         return False, f"Status fora do enum em:\n  " + "\n  ".join(invalidos)
     return True, "Todos os campos `status` estão no enum do PRD §5.3"
