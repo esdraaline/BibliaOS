@@ -30,7 +30,8 @@ Repositório Git válido, branch `main`, com a infraestrutura completa de pastas
 - `00-Metodo/setup.md` com documentação técnica do ambiente
 - `_projeto/verificar.py` com os 12 checks de integridade passando com código 0 (77 notas analisadas)
 - `_projeto/nascimento.md` com auditoria completa de nascimento do PRD §9
-- Remoto no GitHub conectado: `origin` → https://github.com/esdraaline/BibliaOS (privado)
+- Remoto no GitHub conectado: `origin` → https://github.com/esdraaline/BibliaOS (**público** desde 2026-09-06, D-22)
+- `_projeto/guia-usuario.html` — guia visual de uso do sistema, publicado no GitHub Pages via branch órfão `gh-pages` (não toca na estrutura do vault em `main`): https://esdraaline.github.io/BibliaOS/
 
 **O que não existe ainda:**
 - Qualquer nota de estudo bíblico com conteúdo preenchido
