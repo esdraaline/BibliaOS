@@ -31,7 +31,7 @@ Repositório Git válido, branch `main`, com a infraestrutura completa de pastas
 - `_projeto/verificar.py` com os 12 checks de integridade passando com código 0 (77 notas analisadas)
 - `_projeto/nascimento.md` com auditoria completa de nascimento do PRD §9
 - Remoto no GitHub conectado: `origin` → https://github.com/esdraaline/BibliaOS (**público** desde 2026-09-06, D-22)
-- `_projeto/guia-usuario.html` — guia visual de uso do sistema, publicado no GitHub Pages via branch órfão `gh-pages` (não toca na estrutura do vault em `main`): https://esdraaline.github.io/BibliaOS/
+- `_projeto/guia-usuario.html` — guia visual de uso do sistema, com seção "Na Prática" contendo 3 capturas de tela reais do Obsidian (ficha aberta, painel, autocomplete de link), publicado no GitHub Pages via branch órfão `gh-pages` (não toca na estrutura do vault em `main`): https://esdraaline.github.io/BibliaOS/
 
 **O que não existe ainda:**
 - Qualquer nota de estudo bíblico com conteúdo preenchido
@@ -58,7 +58,7 @@ Repositório Git válido, branch `main`, com a infraestrutura completa de pastas
 - [x] Ativar os plugins core Bases e Templates — ambos ativos, pasta de modelos `_templates`; nenhum plugin de comunidade habilitado (`.obsidian/plugins` não existe)
 - [x] Escolher o app de captura no celular (PRD §5.4) — Google Keep, nota "Inbox BibliaOS" criada, sem sync com o vault
 - [x] Abrir `_painel.base` no Obsidian e confirmar renderização visual — feito em 2026-09-06 no Obsidian 1.13.7, com captura de tela: a view Pipeline renderiza sem erro, com as 4 colunas (`file.name`, `tipo`, `status`, `ultima_revisao`) e 0 resultado, que é o esperado enquanto todas as 66 fichas estão em `status: vazio`
-- [ ] Digitar `[[Gn]]`, `[[Genesis]]` e `[[Gênesis]]` no Obsidian para verificar autocomplete
+- [x] Digitar `[[Gn]]`, `[[Genesis]]` e `[[Gênesis]]` no Obsidian para verificar autocomplete — feito em 2026-09-07, com captura de tela real: os três resolvem para `02-Livros/Gênesis` no autocomplete (evidência embutida em `_projeto/guia-usuario.html`, seção "Na Prática")
 - [ ] Fazer primeira captura no celular e triar para o desktop
 - [ ] Preencher o conteúdo de `00-Metodo/falacias-de-estudo-de-palavra.md`
 - [ ] Preencher a tabela da porta `08-Palavras/Amor.md`
