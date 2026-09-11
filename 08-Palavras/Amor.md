@@ -18,6 +18,6 @@ ultima_revisao: null
 | Termo | Transliteração | Strong | Em uma linha, o que o distingue | Ficha |
 |---|---|---|---|---|
 
-## O que a tradução em português junta e o original separa
+## O que a tradução em português junta e o original separa 
 
 ## O que ainda não mapeei
