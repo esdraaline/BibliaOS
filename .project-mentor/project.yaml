@@ -11,21 +11,21 @@ project:
   status_docs: []
 status:
   lifecycle: evolving
-  health: healthy
+  health: unknown
   phase: Operacao por Cadencia (PRD 11)
   priority: null
-  updated_at: 2026-09-16T08:11:22-03:00
-  last_session_at: 2026-09-16T08:11:22-03:00
+  updated_at: 2026-09-16T09:13:25-03:00
+  last_session_at: 2026-09-16T09:13:20-03:00
   confidence: inferred
 focus:
   objective: Vault Obsidian e infraestrutura estruturada para estudo biblico pessoal
-  current: Iniciar primeiro estudo biblico preenchendo tecido em ficha de livro ou palavra
-  last_completed: Mapeamento de estado, foco e próximas ações
-  recommended_next_action: act-002
+  current: Últimos commits (07/09 a 11/09/2026) adicionaram a seção Na
+  last_completed: Publicação do guia no GitHub Pages e documentação com capturas do Obsidian em 07/09/2026.
+  recommended_next_action: act-003
 next_actions:
   - id: act-001
     title: Executar rotina de verificacao de integridade (_projeto/verificar.py) periodicamente
-    status: pending
+    status: dropped
     impact: null
     urgency: null
     effort: null
@@ -37,7 +37,7 @@ next_actions:
     note: null
   - id: act-002
     title: Iniciar primeiro estudo biblico preenchendo tecido em ficha de livro ou palavra
-    status: pending
+    status: dropped
     impact: null
     urgency: null
     effort: null
@@ -47,10 +47,24 @@ next_actions:
     created_at: 2026-09-16T08:11:22-03:00
     done_at: null
     note: null
+  - id: act-003
+    title: Revisar com o usuário o próximo passo de conteúdo ou expansão do guia
+    status: pending
+    impact: null
+    urgency: null
+    effort: null
+    due_date: null
+    unblocks: []
+    blocked_by: []
+    created_at: 2026-09-16T09:13:17-03:00
+    done_at: null
+    note: null
 blockers: []
 decisions_recent:
   - date: 2026-09-16
     text: Estado preenchido com base em _projeto/STATUS.md e CLAUDE.md
+  - date: 2026-09-16
+    text: 'Alinhar focus.current e próxima ação com evidência real: Commits de 07/09/2026 ("docs: adiciona secao Na Pratica...") e 11/09/2026'
 milestones: []
 review:
   stale_after_days: null
