@@ -14,12 +14,12 @@ status:
   health: unknown
   phase: Operacao por Cadencia (PRD 11)
   priority: 3
-  updated_at: 2026-09-16T09:40:14-03:00
+  updated_at: 2026-09-16T15:37:34-03:00
   last_session_at: 2026-09-16T09:13:20-03:00
   confidence: inferred
 focus:
   objective: Vault Obsidian e infraestrutura estruturada para estudo biblico pessoal
-  current: Últimos commits (07/09 a 11/09/2026) adicionaram a seção Na
+  current: Últimos commits (07/09 a 11/09/2026) adicionaram a seção "Na Prática" com capturas do Obsidian e registraram a publicação do guia no GitHub Pages.
   last_completed: Publicação do guia no GitHub Pages e documentação com capturas do Obsidian em 07/09/2026.
   recommended_next_action: act-003
 next_actions:
