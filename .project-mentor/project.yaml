@@ -13,8 +13,8 @@ status:
   lifecycle: evolving
   health: unknown
   phase: Operacao por Cadencia (PRD 11)
-  priority: null
-  updated_at: 2026-09-16T09:13:25-03:00
+  priority: 3
+  updated_at: 2026-09-16T09:40:14-03:00
   last_session_at: 2026-09-16T09:13:20-03:00
   confidence: inferred
 focus:
