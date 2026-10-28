@@ -14,14 +14,14 @@ status:
   health: unknown
   phase: Operacao por Cadencia (PRD 11)
   priority: 3
-  updated_at: 2026-09-16T15:37:34-03:00
+  updated_at: 2026-10-26T17:17:17-03:00
   last_session_at: 2026-09-16T09:13:20-03:00
   confidence: inferred
 focus:
-  objective: Vault Obsidian e infraestrutura estruturada para estudo biblico pessoal
-  current: Últimos commits (07/09 a 11/09/2026) adicionaram a seção "Na Prática" com capturas do Obsidian e registraram a publicação do guia no GitHub Pages.
+  objective: Construir plataforma BibliaOS propria para ler, anotar e pesquisar em uma unica interface
+  current: "Josemar definiu nova direcao: BibliaOS deve ser plataforma propria com leitura, anotacao e pesquisa em uma interface; MVP em desenho, sem aplicativo implementado."
   last_completed: Publicação do guia no GitHub Pages e documentação com capturas do Obsidian em 07/09/2026.
-  recommended_next_action: act-003
+  recommended_next_action: act-004
 next_actions:
   - id: act-001
     title: Executar rotina de verificacao de integridade (_projeto/verificar.py) periodicamente
@@ -49,7 +49,7 @@ next_actions:
     note: null
   - id: act-003
     title: Revisar com o usuário o próximo passo de conteúdo ou expansão do guia
-    status: pending
+    status: dropped
     impact: null
     urgency: null
     effort: null
@@ -58,6 +58,30 @@ next_actions:
     blocked_by: []
     created_at: 2026-09-16T09:13:17-03:00
     done_at: null
+    note: "Substituida pela nova direcao definida por Josemar em 26/10/2026: plataforma propria integrada."
+  - id: act-004
+    title: Definir MVP do aplicativo BibliaOS com leitura, anotacao e pesquisa na mesma interface
+    status: in_progress
+    impact: null
+    urgency: null
+    effort: null
+    due_date: null
+    unblocks: []
+    blocked_by: []
+    created_at: 2026-10-26T16:56:44-03:00
+    done_at: null
+    note: Direcao e primeiro recorte registrados em STATUS; validar experiencia com prototipo funcional antes de fechar o MVP.
+  - id: act-005
+    title: Prototipar caderno BibliaOS Criacao no NotebookLM com RC69, hebraico e grego
+    status: done_tested
+    impact: null
+    urgency: null
+    effort: null
+    due_date: null
+    unblocks: []
+    blocked_by: []
+    created_at: 2026-10-26T17:17:10-03:00
+    done_at: 2026-10-26T17:17:17-03:00
     note: null
 blockers: []
 decisions_recent:
