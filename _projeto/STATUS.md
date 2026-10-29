@@ -3,7 +3,7 @@
 > Este arquivo é a memória do projeto entre sessões. O agente o atualiza ao fim de cada sprint.
 > Se você voltar daqui a três semanas, leia só isto e saberá onde parou.
 
-**Última atualização:** 2026-10-28
+**Última atualização:** 2026-10-29
 **Fase atual:** Redesenho do produto solicitado pelo Josemar. O PRD v11 descreve a implementação anterior em Obsidian; ainda não descreve a plataforma desejada.
 **Construção:** Sprints S0 a S5 concluídos
 
@@ -21,14 +21,15 @@ Josemar quer que o BíbliaOS seja **sua própria plataforma**, com leitura bíbl
 
 **Protótipo NotebookLM/Gemini Notebook (26/10/2026):** criado na conta `lojadares` o caderno privado [BíbliaOS | Criação](https://notebook.google.com/notebook/a152282d-c148-4e58-818c-5001983f6d8a). Sete URLs foram importadas e aparecem como fontes: cinco páginas RC69 da Bíblia Online (Gênesis 1–2, Atos 17, Colossenses 1, Apocalipse 4), uma página de Gênesis da Sefaria e Colossenses 1 em grego no STEP Bible. Consulta de verificação sobre a primeira palavra hebraica de Gênesis 1:1 respondeu `בְּרֵאשִׁ֖ית` e citou a fonte. O livro RC69 não apareceu entre os dois títulos elegíveis do Google Play Livros nessa conta. Uma URL importa apenas o texto daquela página, sem percorrer seus links; o caderno ainda não equivale a uma Bíblia completa ou ao aplicativo próprio. A leitura e a qualidade de cada fonte, especialmente o alcance do texto hebraico e grego importado, precisam de avaliação adicional antes de ampliar o acervo.
 
-**Caderno de estudo montado (27-28/10/2026), 71 fontes:**
+**Caderno de estudo montado (27-29/10/2026), 74 fontes:**
 - **Originais completos, verso a verso, com referência no padrão Almeida:** AT hebraico WLC/OSHB (7 arquivos, com Strong e glosa por palavra; títulos dos Salmos marcados; numeração hebraica indicada quando difere). NT grego (4 arquivos) com TR Scrivener 1894 e SBLGNT lado a lado, palavras do TR com Strong e glosa, e linha DIFERENÇA quando os textos divergem (pontuação e acento não contam). Fontes: OSHB (CC BY 4.0), TAGNT do STEPBible (CC BY 4.0), SBLGNT (CC BY 4.0).
 - **Léxicos:** TBESH e TBESG do STEPBible (4 arquivos).
 - **Comentários de domínio público (módulos SWORD da CrossWire), por versículo:** Matthew Henry Conciso, Calvino, Keil e Delitzsch (AT), Adam Clarke, Jamieson-Fausset-Brown (48 arquivos). Barnes ficou de fora (formato antigo ilegível).
-- **RC69:** 6 capítulos importados por URL do site oficial da SBB (`https://www.sbb.org.br/biblia/RC69/GEN.1`, GEN.2, ACT.17, COL.1, REV.4, 1JN.5). As 5 páginas da Bíblia Online foram removidas porque entraram sem o texto dos versículos.
+- **RC69 completa (29/10/2026):** 3 PDFs do ebook oficial da SBB (`RC69 - Parte 1 - Gênesis a Ester.pdf`, `Parte 2 - Jó a Malaquias`, `Parte 3 - Mateus a Apocalipse`), divididos por causa do limite de 500 mil palavras por fonte (o livro inteiro tem 825 mil). Texto de cada parte conferido idêntico ao PDF original. Teste: Cl 1:15, 1 Jo 5:7 e Jó 19:25 vieram literais e citando a parte certa. Origem do PDF: `Downloads/Biblia-Sagrada-ARC-1969.pdf` (3.933 páginas, as últimas 1.321 são índice de navegação e ficaram de fora). Ver D-27.
+- **RC69 por URL (anterior):** 6 capítulos importados por URL do site oficial da SBB (`https://www.sbb.org.br/biblia/RC69/GEN.1`, GEN.2, ACT.17, COL.1, REV.4, 1JN.5). As 5 páginas da Bíblia Online foram removidas porque entraram sem o texto dos versículos.
 - **Instrução fixa ("Configurar as conversas" → Personalizado, cerca de 3 mil caracteres):** exige RC69 e original em toda passagem, citação de fonte com autor e tradição, marca [INFERÊNCIA] com o caminho do raciocínio e proíbe reconstruir a RC69 de memória.
 - **Testes (Gn 1:1, Cl 1:15, 1 Jo 5:7):** original, Strong, léxico e comentários vieram certos e citando o arquivo correto, nos três. A RC69 apareceu só em Gn 1:1. Em Cl 1 e 1 Jo 5 o caderno diz que a RC69 falta: as páginas da SBB aparecem completas no visualizador, mas o NotebookLM só indexa o cabeçalho delas. Conclusão: URL de capítulo não serve como fonte confiável da RC69.
-- **RC69 completa:** o ebook oficial da SBB (Google Play R$ 11,90; Amazon Kindle) tem DRM e não entra no NotebookLM. A integração Play Livros → NotebookLM só aceita títulos selecionados em inglês. Os termos da SBB (EULA §5 e §6) vedam cópia sem permissão e indicam `direitos@sbb.org.br`. Rascunho do pedido de autorização criado no Gmail de josemardp, **não enviado**, aguardando o "sim" do Josemar. Com a autorização, montar arquivo RC69 verso a verso no mesmo formato dos originais.
+- **Autorização da SBB (anterior à D-27):** o ebook oficial da SBB (Google Play R$ 11,90; Amazon Kindle) tem DRM e não entra no NotebookLM. A integração Play Livros → NotebookLM só aceita títulos selecionados em inglês. Os termos da SBB (EULA §5 e §6) vedam cópia sem permissão e indicam `direitos@sbb.org.br`. Rascunho do pedido de autorização criado no Gmail de josemardp, **não enviado**, aguardando o "sim" do Josemar. Com a autorização, montar arquivo RC69 verso a verso no mesmo formato dos originais.
 - **Scripts geradores** (`gerar_originais.py`, `gerar_comentarios.py`, só biblioteca padrão) ficaram no scratchpad da sessão de 27/10, fora do repositório. Decidir se entram no repo.
 
 ---
