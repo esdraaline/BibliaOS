@@ -14,13 +14,13 @@ status:
   health: unknown
   phase: Operacao por Cadencia (PRD 11)
   priority: 3
-  updated_at: 2026-10-26T17:17:17-03:00
-  last_session_at: 2026-09-16T09:13:20-03:00
-  confidence: inferred
+  updated_at: 2026-10-29T08:45:14-03:00
+  last_session_at: 2026-10-29T08:45:14-03:00
+  confidence: confirmed
 focus:
   objective: Construir plataforma BibliaOS propria para ler, anotar e pesquisar em uma unica interface
-  current: "Josemar definiu nova direcao: BibliaOS deve ser plataforma propria com leitura, anotacao e pesquisa em uma interface; MVP em desenho, sem aplicativo implementado."
-  last_completed: Publicação do guia no GitHub Pages e documentação com capturas do Obsidian em 07/09/2026.
+  current: Definir o MVP do aplicativo BíbliaOS com leitura, anotação e pesquisa na mesma interface
+  last_completed: STATUS.md e DECISOES.md atualizados (D-26 revista, D-27 nova); commit 5643806 com push
   recommended_next_action: act-004
 next_actions:
   - id: act-001
@@ -89,6 +89,8 @@ decisions_recent:
     text: Estado preenchido com base em _projeto/STATUS.md e CLAUDE.md
   - date: 2026-09-16
     text: 'Alinhar focus.current e próxima ação com evidência real: Commits de 07/09/2026 ("docs: adiciona secao Na Pratica...") e 11/09/2026'
+  - date: 2026-10-29
+    text: "D-27: RC69 completa a partir do PDF do ebook oficial da SBB, decisão do Josemar; substitui a espera pela autorização da SBB (D-26)"
 milestones: []
 review:
   stale_after_days: null
